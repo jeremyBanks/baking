@@ -10,7 +10,7 @@ use {
     },
 };
 
-/// the description of the mission of bacon
+/// the description of the mission of baking
 /// after analysis of the args, env, and surroundings
 #[derive(Debug)]
 pub struct Mission<'s> {

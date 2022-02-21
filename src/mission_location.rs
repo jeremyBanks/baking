@@ -28,7 +28,7 @@ impl MissionLocation {
             Err(cargo_metadata::Error::CargoMetadata { stderr }) if cargo_manifest_not_found(&stderr) => {
                 bail!(
                     "Cargo.toml file not found.\n\
-                    bacon must be launched \n\
+                    baking must be launched \n\
                     * in a rust project directory\n\
                     * or with a rust project directory given in argument\n\
                     (a rust project directory contains a Cargo.toml file or has such parent)\n\
@@ -77,7 +77,7 @@ impl MissionLocation {
             .to_string()
     }
     pub fn package_config_path(&self) -> PathBuf {
-        self.package_directory.join("bacon.toml")
+        self.package_directory.join("baking.toml")
     }
 }
 

@@ -3,7 +3,7 @@ use {
     anyhow::{anyhow, Result},
 };
 
-/// The stack of jobs that bacon ran, allowing
+/// The stack of jobs that baking ran, allowing
 /// to get back to the previous one
 pub struct JobStack<'c> {
     package_config: &'c PackageConfig,

@@ -3,7 +3,7 @@ use {
     serde::Deserialize,
 };
 
-/// One of the possible job that bacon can run
+/// One of the possible job that baking can run
 #[derive(Debug, Clone, Deserialize)]
 pub struct Job {
     /// The tokens making the command to execute (first one

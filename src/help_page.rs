@@ -10,9 +10,9 @@ use {
 
 static TEMPLATE: &str = r#"
 
-# bacon ${version}
+# baking ${version}
 
-**bac*o*n** is a background compiler, watching your sources and executing your cargo jobs on change.
+**baking** is a background compiler, watching your sources and executing your cargo jobs on change.
 
 See *https://github.com/Canop/bacon* for a complete guide.
 
@@ -24,7 +24,7 @@ ${keybindings
 }
 |-:
 
-Those bindings can be configured in your global `prefs.toml` file or in the project's `bacon.toml` file.
+Those bindings can be configured in your global `prefs.toml` file or in the project's `baking.toml` file.
 
 
 "#;

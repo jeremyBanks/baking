@@ -21,7 +21,7 @@ pub enum CommandExecInfo {
     /// Command ended
     End { status: Option<ExitStatus> },
 
-    /// Bacon killed the command
+    /// baking killed the command
     Interruption,
 
     /// Execution failed

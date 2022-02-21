@@ -42,7 +42,7 @@ pub fn run() -> anyhow::Result<()> {
                 fs::create_dir_all(prefs_path.parent().unwrap())?;
                 fs::write(&prefs_path, DEFAULT_PREFS.trim_start())?;
                 // written to stderr to allow initialization with commands like
-                //  $EDITOR "$(bacon --prefs)"
+                //  $EDITOR "$(baking --prefs)"
                 eprintln!("Preferences file written.");
             }
             println!("{}", prefs_path.to_string_lossy());
@@ -59,9 +59,9 @@ pub fn run() -> anyhow::Result<()> {
     if args.init {
         if !package_config_path.exists() {
             fs::write(&package_config_path, DEFAULT_PACKAGE_CONFIG.trim_start())?;
-            eprintln!("bacon project configuration file written.");
+            eprintln!("baking project configuration file written.");
         } else {
-            eprintln!("bacon configuration file already exists.");
+            eprintln!("baking configuration file already exists.");
         }
         println!("{}", package_config_path.to_string_lossy());
         return Ok(());

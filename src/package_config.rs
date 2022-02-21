@@ -6,7 +6,7 @@ use {
     std::{collections::HashMap, fs, path::Path},
 };
 
-/// the configuration item which may be stored as `bacon.toml`
+/// the configuration item which may be stored as `baking.toml`
 /// along a `Cargo.toml` file
 #[derive(Debug, Clone, Deserialize)]
 pub struct PackageConfig {
@@ -20,25 +20,25 @@ impl PackageConfig {
         let conf = toml::from_str::<PackageConfig>(&fs::read_to_string(path)?)
             .with_context(|| format!("Failed to parse configuration file at {:?}", path))?;
         if conf.jobs.is_empty() {
-            bail!("Invalid bacon.toml : no job found");
+            bail!("Invalid baking.toml : no job found");
         }
         for (name, job) in &conf.jobs {
             if !regex_is_match!(r#"^[\w-]+$"#, name) {
                 bail!(
-                    "Invalid bacon.toml : Illegal job name : {:?}",
+                    "Invalid baking.toml : Illegal job name : {:?}",
                     name
                 );
             }
             if job.command.is_empty() {
                 bail!(
-                    "Invalid bacon.toml : empty command for job {:?}",
+                    "Invalid baking.toml : empty command for job {:?}",
                     name
                 );
             }
         }
         if !conf.jobs.contains_key(&conf.default_job) {
             bail!(
-                "Invalid bacon.toml : default job not found in jobs"
+                "Invalid baking.toml : default job not found in jobs"
             );
         }
         Ok(conf)

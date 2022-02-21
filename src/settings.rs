@@ -4,7 +4,7 @@ use crate::*;
 ///
 /// They're made from default, overriden (in order)
 /// by the general prefs (global prefs.toml file), by
-/// the package config (bacon.toml file in the project
+/// the package config (baking.toml file in the project
 /// directory) and by the launch arguments.
 ///
 /// They're immutable during the execution of the missions.

@@ -4,7 +4,7 @@ use {
 };
 
 #[derive(Debug, Parser)]
-/// bacon watches your source and run code checks in background.
+/// baking watches your source and run code checks in background.
 ///
 /// Documentation at <https://dystroy.org/bacon>
 #[clap(version, about)]
@@ -42,7 +42,7 @@ pub struct Args {
     #[clap(short = 'l', long = "list-jobs")]
     pub list_jobs: bool,
 
-    /// create a bacon.toml file, ready to be customized
+    /// create a baking.toml file, ready to be customized
     #[clap(long = "init")]
     pub init: bool,
 
@@ -50,7 +50,7 @@ pub struct Args {
     #[clap(short = 'j', long = "job")]
     pub job: Option<String>,
 
-    /// ignore features of both the package and the bacon job
+    /// ignore features of both the package and the baking job
     #[clap(long = "no-default-features")]
     pub no_default_features: bool,
 
@@ -77,7 +77,7 @@ pub struct Args {
 }
 
 impl Args {
-    /// positional arguments in bacon command are a convenience
+    /// positional arguments in baking command are a convenience
     /// allowing to skip writing `-j`, `-p`, or both.
     /// To be used, they must be copied to the `job` or
     /// `path` values.
